@@ -15,6 +15,13 @@
       "when": 1790325272099,
       "tag": "0001_slim_the_twelve",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790334327489,
+      "tag": "0002_good_hiroim",
+      "breakpoints": true
     }
   ]
 }
