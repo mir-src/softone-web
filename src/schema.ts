@@ -1,3 +1,4 @@
+import { time } from 'console';
 import {
   pgTable,
   pgEnum,
@@ -104,3 +105,13 @@ export const clients = pgTable('Client', {
     email: text('email'),
 })
 
+export const contracts = pgTable('Contracts', {
+    id: serial('id').primaryKey(),
+    isActive: boolean('isActive').default(true).notNull(),
+    createdAt: timestamp('createdAt').defaultNow().notNull(),
+    updatedAt: timestamp('updatedAt').defaultNow().notNull().$onUpdate(() => new Date()),
+    name: text('name').notNull(),
+    description: text('name').notNull(),
+    startDate: timestamp('startDate').notNull(),
+    expirationDate: timestamp('expirationDate'),
+})
